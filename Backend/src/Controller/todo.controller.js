@@ -6,7 +6,7 @@ const createTodo = async(req,res)=>{
 
     const userId = req.user;    
     
-    findUser = await User.findById(userId)
+    const findUser = await User.findById(userId)
     if(!findUser)
     {
         return res.status(404).json({message:"User not found"})
