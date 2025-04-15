@@ -1,0 +1,271 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
+
+body{
+  display:flex ;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif !important;
+  overflow-x: hidden;
+}
+.main-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+.form-container {
+  max-width: 600px; 
+  margin: auto;
+}
+
+.main-container-todo{
+  /* background-color: #007bff; */
+  width: 1250px;
+  
+}
+
+:root {
+  --gray-100: #f3f4f6;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+  --emerald-500: #10b981; 
+  --ff-roboto: "Roboto", sans-serif;
+}
+
+
+
+main {
+  width: 100%;
+  height: 100%;
+}
+.btn-todo{
+  background: linear-gradient(45deg,#8D334C,#CF6964);
+  border-radius: 50px;
+}
+header {
+  width: 1270px !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.5rem;
+  background: linear-gradient(45deg,#8D334C,#CF6964);
+  display: flex;
+  display: -webkit-flex;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.title{
+  color: #CF6964;
+}
+
+
+nav {
+  display: flex;
+  gap: 2rem;
+  margin: 0rem 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.dropdown-wrapper {
+  position: relative;
+}
+
+.dropdown-toggle {
+  display: none;
+}
+
+
+.dropdown-label {
+  height: 3rem;
+  width: 3rem;
+  display: block;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  background-image: url("https://d39qlo6vcf2ui2.cloudfront.net/codepen/profile-drop-down/pexels-pixabay-415829.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 4rem;
+  left: -6rem;
+  padding: 1rem 0rem;
+  color: var(--gray-100);
+
+  border-radius: 5px;
+}
+
+.upper-triangle {
+  position: absolute;
+  right: 17%;
+  top: -0.75rem;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent; 
+  border-right: 12px solid transparent; 
+  border-bottom: 12px solid var(--gray-900); 
+}
+
+.dropdown-menu--display {
+  display: none;
+}
+
+.dropdown-label{
+  background-image: url("./assets/profile.png");
+
+}
+.dropdown-toggle:checked + .dropdown-label + .dropdown-menu--display {
+  display: block;
+}
+
+.dropdown-list-icon {
+  font-size: 1.25rem;
+}
+
+.dropdown-list {
+  list-style-type: none;
+  width: 8rem;
+}
+
+.dropdown-list > li {
+  padding: .25rem 0.25rem;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.dropdown-list > li:hover {
+  border-left: 5px solid var(--emerald-500);
+  /* background-color: var(--gray-800); */
+}
+
+.dropdown-list > li > span {
+  font-size: 1rem;
+}
+
+.profile-circle{
+  border-radius: 50%;
+}
+.set-progile-image{
+  width: 50px;
+}
+.logout-text{
+  color: black
+}
+
+
+.AppForm .AppFormLeft h1{
+    font-size: 35px;
+}
+.AppForm .AppFormLeft input:focus{
+    border-color: #ced4da;
+}
+.AppForm .AppFormLeft input::placeholder{
+   font-size: 15px;
+}
+.AppForm .AppFormLeft i{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.AppForm .AppFormLeft a{
+    color: #3a3e42 ;
+}
+.AppForm .AppFormLeft button{
+    background: linear-gradient(45deg,#8D334C,#CF6964);
+    border-radius: 30px;
+}
+.AppForm .AppFormLeft p span{
+  color: #007bff;
+}
+.AppForm .AppFormRight{
+    background-image: url('https://i.ibb.co/tDLqQtj/bg.jpg');
+    height: 450px;
+    background-size: cover;
+    background-position: center;
+}
+.AppForm .AppFormRight:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#8D334C,#CF6964);
+    opacity: 0.5;
+}
+.AppForm .AppFormRight h2{
+    z-index: 1;
+}
+.AppForm .AppFormRight h2::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0;
+  left:50%;
+  transform: translateX(-50%);
+}
+.AppForm .AppFormRight p{
+    z-index: 1;
+}
+
+/* checkbox */
+.custom-checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  opacity: 0; 
+  position: absolute;
+}
+
+.checkmark {
+  width: 18px; 
+  height: 18px; 
+  background-color: #eee; 
+  border-radius: 4px; 
+  margin-right: 5px; 
+  transition: background-color 0.3s;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #27af22; 
+}
+
+.checkmark:after {
+  content: "";
+  display: none; 
+}
+
+.custom-checkbox input:checked + .checkmark:after {
+  display: block; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
