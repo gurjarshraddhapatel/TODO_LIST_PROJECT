@@ -13,7 +13,7 @@ const Register = () => {
     const handleRegister = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:1000/users/create', {
+            const response = await axios.post('https://todo-list-project-ydmi.onrender.com/users/create', {
                 fullName,
                 email,
                 password,

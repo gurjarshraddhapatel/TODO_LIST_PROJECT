@@ -8,7 +8,7 @@ const Header = () => {
     const handleLogout = async () => {
         try {
             const token = localStorage.getItem("token");
-            await axios.post('http://localhost:1000/users/logout', {}, {
+            await axios.post('https://todo-list-project-ydmi.onrender.com/users/logout', {}, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

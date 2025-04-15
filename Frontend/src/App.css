@@ -43,7 +43,7 @@ main {
   border-radius: 50px;
 }
 header {
-  width: 1270px !important;
+ width: 100%;
   position: absolute;
   top: 0;
   left: 0;

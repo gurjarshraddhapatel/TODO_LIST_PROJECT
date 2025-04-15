@@ -16,7 +16,7 @@ const Todo = () => {
 
   const fetchTodos = async () => {
     try {
-      const res = await axios.get('http://localhost:1000/todos/get-todo', axiosConfig);
+      const res = await axios.get('https://todo-list-project-ydmi.onrender.com/todos/get-todo', axiosConfig);
       setTodos(res.data.getTodo);
       console.log('Fetched todos:', res.data.getTodo);
     } catch (err) {
@@ -36,13 +36,13 @@ const Todo = () => {
     try {
       if (editId) {
         await axios.patch(
-          `http://localhost:1000/todos/update-todo/${editId}`,
+          `https://todo-list-project-ydmi.onrender.com/todos/update-todo/${editId}`,
           form,
           axiosConfig
         );
         setMessage('Todo updated successfully');
       } else {
-        await axios.post('http://localhost:1000/todos/create', form, axiosConfig);
+        await axios.post('https://todo-list-project-ydmi.onrender.com/todos/create', form, axiosConfig);
         setMessage('Todo created successfully');
       }
 
@@ -58,7 +58,7 @@ const Todo = () => {
   
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:1000/todos/delete-todo/${id}`, axiosConfig);
+      await axios.delete(`https://todo-list-project-ydmi.onrender.com/todos/delete-todo/${id}`, axiosConfig);
       setMessage('Todo deleted');
       fetchTodos();
     } catch (err) {
@@ -124,7 +124,7 @@ const Todo = () => {
 
         </div>
 
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }} className='mx-5 mt-5'>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }} className='mx-5 mt-5 '>
           {todos.map((todo) => (
             <div key={todo._id} style={{ border: '1px solid #ccc', padding: '10px', width: 'calc(31% - 10px)', borderRadius: '5px', boxShadow: '0 2px 5px rgba(0,0,0,0.1)' }} className='shadow todo-cards px-3 border-danger'>
               <div>
